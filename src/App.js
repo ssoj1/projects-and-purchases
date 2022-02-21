@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import ItemList from './ItemList';
 import ItemDetail from "./ItemDetail";
+import AddForm from "./AddForm";
 import { fetchItems, addItem as addItemApi } from "./Api";
 import { Route, Routes } from "react-router-dom";
 // Switch is now called ROUTES
@@ -35,9 +36,9 @@ function App() {
 
     /** Call API to add item of type "projects" or "purchases"; update state */
 
-    async function addItem(type, { name, description, recipe, serve }) {
-      let id = slugify(name, { lower: true });
-      let objData = { id, name, description, recipe, serve };
+    async function addItem(type, { title, details, image_url }) {
+      let id = slugify(title, { lower: true });
+      let objData = { id, title, details, image_url };
       await addItemApi(type, objData);
       setAllItems(m => ({
         ...m,
@@ -59,13 +60,9 @@ function App() {
 
           <Route path="/projects/:id" element={<ItemDetail items={allItems.projects} cantFind="/projects" />} />
 
-          {/* <Route path="/purchases/:id">
-            <Detail items={purchases} cantFind="/purchases" />
-          </Route>
+          <Route path="/purchases/:id" element={<ItemDetail items={allItems.purchases} cantFind="/purchases" />} />
 
-          <Route path="/add">
-            <AddForm addItem={addItem} />}
-          </Route> */}
+          <Route path="/add" element={<AddForm addItem={addItem} />} />
 
           {/* <Route>
             <p>Hmmm. I can't seem to find what you want.</p>
