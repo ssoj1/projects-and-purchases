@@ -8,23 +8,24 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div>
-      <Navbar expand="md">
-        <NavLink exact to="/" className="navbar-brand">
-          Home
-        </NavLink>
+      <Navbar >
+        <Nav className="navbar">
+          <NavItem className="navbar-primary">
+            <NavLink exact to="/" >Home</NavLink>
+          </NavItem>
 
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink to="/projects">Projects</NavLink>
+          <NavItem className="navbar-secondary">
+            <NavLink exact to="/add" >Add Item</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink to="/purchases">Purchases</NavLink>
+
+          <NavItem className="navbar-secondary">
+            <NavLink to="/purchases" >Purchases</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink exact to="/add" className="mr-0">
-              Add Item
-            </NavLink>
+          
+          <NavItem className="navbar-secondary">
+            <NavLink to="/projects" >Projects</NavLink>
           </NavItem>
+
         </Nav>
       </Navbar>
     </div>

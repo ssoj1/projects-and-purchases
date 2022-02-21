@@ -1,0 +1,14 @@
+h2 {
+    text-align: center;
+    font-size: larger;
+    color: black;
+}
+
+.card a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.card-title {
+    text-align: center;
+}

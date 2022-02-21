@@ -9,7 +9,7 @@ function Home() {
   console.log("*Home");
 
   return (
-    <section className="col-md-8">
+    <section>
       <Card>
         <CardBody className="text-center">
           <CardTitle>
