@@ -1,19 +1,18 @@
 {
-  "posts": [
+  "projects": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": "mathers-birthday-shorts",
+      "title": "Mather's Birthday Shorts",
+      "details": "Elastic waist shorts with inseam pockets made from orange and pink flower cotton",
+      "image_url": "https://i5.walmartimages.com/asr/ab8fe2f8-3b46-4d46-a3cb-be766da623a7.e6466d29102485727f86fb09a7daea93.jpeg"
     }
   ],
-  "comments": [
+  "purchases": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "clogs",
+      "title": "Clogs",
+      "details": "Minimal wood sole clogs with buff or bone tops",
+      "image_url": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/nosix/nosix3002412158/nosix3002412158_q6_2-0._UX357_QL90_.jpg"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

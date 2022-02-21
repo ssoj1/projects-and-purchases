@@ -14,7 +14,7 @@ import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 function ItemDetail({ items, cantFind }) {
   const { id } = useParams();
 
-  console.log("*ItemDetail ", {items})
+  console.log("*ItemDetail ", {items, cantFind});
 
   let item = items.find(item => item.id === id);
   if (!item) return <Navigate to={cantFind} />;
@@ -27,7 +27,7 @@ function ItemDetail({ items, cantFind }) {
             {item.title}
           </CardTitle>
           <CardText className="font-italic">{item.details}</CardText>
-          <img src={require(item.image_url)} alt="project or purchase" />
+          <img src={item.image_url} alt="project or purchase" />
         </CardBody>
       </Card>
     </section>

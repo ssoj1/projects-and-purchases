@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavItem } from "reactstrap";
+import "./NavBar.css";
 
 /** Top navigation bar for site. */
 

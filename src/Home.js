@@ -6,7 +6,7 @@ import { Card, CardBody, CardTitle, CardText } from "reactstrap";
  */
 
 function Home() {
-  console.log("*Home")
+  console.log("*Home");
 
   return (
     <section className="col-md-8">
